@@ -61,6 +61,7 @@
 //   #include "uart.h"
 //#include <midi.h>
   
+#define     LENTA_LENGTH 5
 
 #define     WS2811          LATBbits.LATB2
 #define     WS2811_TRIS     TRISBbits.TRISB2

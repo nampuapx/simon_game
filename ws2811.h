@@ -1,7 +1,8 @@
 
 
 void color_set(unsigned char pow);
-void led_set_white(unsigned char pow);
+//void led_set_white(unsigned char pow);
+void set_all_leds(unsigned char red, unsigned char  green, unsigned char blue);
 
 
 #define led_set_green(pow)    color_set(pow);color_set(0);color_set(0);
