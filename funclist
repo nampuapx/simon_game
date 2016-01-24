@@ -1,8 +1,13 @@
-_delay: CODE, 410 0 42
-_color_set: CODE, 452 0 40
-_main: CODE, 166 0 142
-_led_set_white: CODE, 492 0 22
-_hi_int: CODE, 8 0 402
-__initialization: CODE, 514 0 0
+_delay: CODE, 1394 0 42
+_color_set: CODE, 1436 0 40
+__stringdata: SMALLCONST, 267 0 3
+_dpowers: SMALLCONST, 257 0 10
+_main: CODE, 272 0 578
+_hi_int: CODE, 8 0 1238
+__initialization: CODE, 1476 0 24
+___lwdiv: CODE, 1246 0 82
+_sprintf: CODE, 850 0 294
+___lwmod: CODE, 1328 0 66
+_setup: CODE, 1510 0 16
 _tc_clr: CODE, 24 0 138
-Total: 786
+Total: 2531
