@@ -10,16 +10,26 @@ unsigned int g_seed = 20;
 
 void interrupt hi_int(void)
 {
-
+    TMR0H = (char)((0xffff-6250)>>8);
+	TMR0L = (char)(0xffff-6250);
+    TMR0IF = 0;
 }
 
 void interrupt low_priority tc_clr(void) 
 {
-
+    TMR1H = (char)((0xffff-5000)>>8);
+	TMR1L = (char)(0xffff-5000);
+    TMR1IF = 0;
 }
 
 
-
+unsigned int get_seed(void){
+    unsigned int seed;
+    
+    *(char*)(&seed) = TMR1L;
+    *(((char*)(&seed))+sizeof(char)) = TMR1H;
+    return seed>>1;
+}
 
 
 void delay(unsigned char inp){
@@ -32,11 +42,7 @@ unsigned int count;
 }	
 
 
-void sound_driver_init(void){
-    
-    
-    
-}
+
 void setup(void){
  
 	RCONbits.IPEN = 1;
@@ -47,6 +53,18 @@ void setup(void){
     BUTTON02_TRIS = 1;
     BUTTON03_TRIS = 1;
     BUTTON04_TRIS = 1;
+    
+    T0CON = 0b10001000;
+    T1CON = 0b10000001;
+    
+    TMR0IP = 1;
+    TMR0IF = 0;
+    TMR0IE = 1;
+    
+    TMR1IP = 0;
+    TMR1IF = 0;
+    TMR1IE = 1; 
+    
 }
 
 unsigned char get_next_psevdo_digit(unsigned int *Xn_1)
@@ -171,9 +189,9 @@ unsigned char wait_button(void){
     return button;
 }
 
-
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 
 void main(){
   
@@ -191,7 +209,7 @@ void main(){
     
     wait_button();
     start_flash();
-    g_seed = g_seed;
+    g_seed = get_seed(); // Захват стартового значения для ПСП
     delay(150);
     len = 1;
     
@@ -241,7 +259,7 @@ void main(){
         }else{
             wait_button();          // Ожидание нажатия для начала следующего раунда
             start_flash();
-            g_seed = g_seed;        // Захват стартового значения для ПСП
+            g_seed = get_seed();        // Захват стартового значения для ПСП
             delay(10);
             len = 1;
         }
