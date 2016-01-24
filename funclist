@@ -1,0 +1,5 @@
+_main: CODE, 268 0 10
+_hi_int: CODE, 8 0 260
+__initialization: CODE, 278 0 0
+_tc_clr: CODE, 24 0 138
+Total: 408

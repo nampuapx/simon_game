@@ -1,0 +1,8 @@
+.map
+build
+disassembly
+dist
+debug
+Makefile-*
+Package-*
+private
