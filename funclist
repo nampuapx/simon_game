@@ -1,17 +1,19 @@
-_delay: CODE, 1654 0 42
-_color_set: CODE, 1696 0 40
+_delay: CODE, 2112 0 42
+_color_set: CODE, 2154 0 40
 __stringdata: SMALLCONST, 267 0 3
 _dpowers: SMALLCONST, 257 0 10
-_main: CODE, 892 0 222
-_show_color: CODE, 272 0 326
-_hi_int: CODE, 8 0 1376
-__initialization: CODE, 1736 0 24
-___lwdiv: CODE, 1384 0 82
-_get_next_psevdo_digit: CODE, 1114 0 168
-_sprintf: CODE, 598 0 294
-_error: CODE, 1466 0 76
-___lwmod: CODE, 1542 0 66
-_setup: CODE, 1770 0 16
+_main: CODE, 670 0 320
+_show_color: CODE, 272 0 398
+_hi_int: CODE, 8 0 1782
+__initialization: CODE, 2194 0 24
+_wait_button: CODE, 2020 0 46
+___lwdiv: CODE, 1790 0 82
+_get_next_psevdo_digit: CODE, 1520 0 168
+_start_flash: CODE, 1284 0 236
+_sprintf: CODE, 990 0 294
+_error: CODE, 1872 0 82
+___lwmod: CODE, 1954 0 66
+_setup: CODE, 2228 0 16
 _tc_clr: CODE, 24 0 138
-_set_all_leds: CODE, 1608 0 46
-Total: 2929
+_set_all_leds: CODE, 2066 0 46
+Total: 3793
