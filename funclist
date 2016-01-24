@@ -1,5 +1,8 @@
-_main: CODE, 268 0 10
-_hi_int: CODE, 8 0 260
-__initialization: CODE, 278 0 0
+_delay: CODE, 410 0 42
+_color_set: CODE, 452 0 40
+_main: CODE, 166 0 142
+_led_set_white: CODE, 492 0 22
+_hi_int: CODE, 8 0 402
+__initialization: CODE, 514 0 0
 _tc_clr: CODE, 24 0 138
-Total: 408
+Total: 786

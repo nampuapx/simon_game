@@ -35,8 +35,16 @@ void led_set_white(unsigned char pow){
     color_set(pow);
     color_set(pow);
 }
-
-
+//void led_set_red(unsigned char pow){
+//    color_set(pow);
+//    color_set(0);
+//    color_set(0);
+//}
+//void led_set_green(unsigned char pow){
+//    color_set(0);
+//    color_set(pow);
+//    color_set(0);
+//}
 
 
 
