@@ -1,5 +1,9 @@
 
 
+void int_off(void);
+void int_on(void);
+
+
 
         #pragma config OSC     =  HS
         #pragma config FSCM    = OFF
@@ -74,5 +78,8 @@
 #define     BUTTON03_TRIS     TRISBbits.TRISB1
 #define     BUTTON04          PORTBbits.RB3
 #define     BUTTON04_TRIS     TRISBbits.TRISB3
+#define     SOUND_OUT         LATBbits.LATB5
+#define     SOUND_OUT_TRIS    TRISBbits.TRISB5
+
 
 
