@@ -91,12 +91,13 @@ unsigned int count;
 }	
 
 void int_off(void){
-    
+
     GIEH = 0;
     GIEL = 0;
 }
+
 void int_on(void){
-    
+
     GIEH = 1;
     GIEL = 1;
 }
